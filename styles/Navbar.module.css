@@ -1,0 +1,9 @@
+.container {
+    background-color: #DDDDDD;
+    position: sticky;
+    padding: 0px 50px;
+    height: 100px;
+    display: flex;
+    top: 0;
+    z-index: 2;
+}

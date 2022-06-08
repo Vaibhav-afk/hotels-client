@@ -1,0 +1,14 @@
+.container {
+    box-shadow: 0 0 1.8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem;
+    background-color: #F9F9F9;
+    height: fit-content;
+    width: fit-content;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.items{
+    margin: 1.3rem 0.3rem;
+}

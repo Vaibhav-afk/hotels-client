@@ -1,0 +1,37 @@
+.container {
+    box-shadow: 0 0 1.8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 1.3rem;
+    background-color: #DDDDDD;
+    height: 340px;
+    width: 330px;
+    margin: 2rem;
+}
+
+.image {
+    border-radius: 1.3rem 1.3rem 0 0;
+    object-fit: cover;
+}
+
+.hotelName {
+    background-color: #fff;
+    margin-top: -4px;
+    padding: 7px;
+}
+
+.viewButton {
+    box-shadow: 0 0 1.2px 0 rgba(0, 0, 0, 0.5);
+    background-color: #1363DF;
+    border-radius: 1rem;
+    font-weight: 540;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    padding: 3px;
+    width: 100px;
+    height: 40px;
+}
+
+.viewButton {
+    outline: none;
+}
