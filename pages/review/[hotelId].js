@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Review.module.css";
 import axios from "axios";
 
-export default function review() {
+export default function Review() {
   const router = useRouter();
   const { hotelId } = router.query;
   const [username, setUsername] = useState("");

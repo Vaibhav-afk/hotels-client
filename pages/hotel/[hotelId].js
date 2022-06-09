@@ -4,7 +4,7 @@ import styles from "../../styles/Hotel.module.css";
 import Link from "next/link";
 import axios from "axios";
 
-export default function hotel() {
+export default function Hotel() {
   const router = useRouter();
   const { hotelId } = router.query;
   const [data, setData] = useState({});
