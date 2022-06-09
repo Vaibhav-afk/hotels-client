@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import testData from "../../components/test";
 import styles from "../../styles/Hotel.module.css";
 import Link from "next/link";
+import axios from "axios";
 
 export default function hotel() {
   const router = useRouter();
@@ -11,13 +11,10 @@ export default function hotel() {
 
   useEffect(() => {
     const fetchData = async () => {
-      setData(testData.data[9]);
-      console.log(data);
-      // const res = await axios
-      //   .get
-      //   // "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken"
-      //   ();
-      // setData(res.data.meals);
+      const res = await axios.get(
+        `https://server-hotels.herokuapp.com/hotels/${hotelId}`
+      );
+      setData(res.data);
     };
 
     fetchData();
@@ -38,8 +35,8 @@ export default function hotel() {
       <h3 className={styles.text}>Reviews</h3>
       <hr />
       <div className={styles.reviewContainer}>
-        {data.reviews?.map((review) => (
-          <div className={styles.reviewBox}>
+        {data.reviews?.map((review, index) => (
+          <div key={index} className={styles.reviewBox}>
             <strong style={{ color: "#B20600" }}>{review.username}</strong>
             <p>{review.review}</p>
           </div>

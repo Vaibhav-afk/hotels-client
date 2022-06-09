@@ -2,26 +2,20 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import Card from "../components/Card";
 import axios from "axios";
-import testData from "./test";
 
 export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      setData(testData.data);
-      console.log(data);
-      // const res = await axios
-      //   .get
-      //   // "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken"
-      //   ();
-      // setData(res.data.meals);
+      const res = await axios.get(
+        "https://server-hotels.herokuapp.com/hotels/all"
+      );
+      setData(res.data);
     };
 
     fetchData();
   }, [data]);
-
-  // console.log(data);
 
   return (
     <div className={styles.container}>
